@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">	
+	<title>My Carousel </title> 
+    <link rel="stylesheet" type="text/css" href="css/main-style.css" />
+	<script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="js/plspagination.js"></script>
+    
+    
+     <script>  
+		$(document).ready(function(e) {      		
+			for(var i=0;i<250;i++){
+				var str = "<div class='thumb'>"+ i+" </div>";	
+				$("#content").append(str);
+			}				
+			$('.content').plsPagination({height: 2400, fadeSpeed: 0, shownumPages:6});
+		});	
+  	</script>
+
+  </head>
+  <body>
+   <!-- pagination div start--> 
+   <div class="imgGalleryWithPagination">
+        <div class="pagination">
+        	<div id="firstBtn" class="firstLastBtn">First</div>
+            <div id="prev" class="prevnext">«</div>
+            <div class="pageContainer">
+            	<ul></ul>      
+            </div>
+            <div id="next" class="prevnext">»</div> 
+            <div id="lastBtn" class="firstLastBtn">Last</div>
+        </div>    
+        <div class="crousalContainer clear-fix">
+            <div id="content" class="content"></div>
+            <div id="backPage" class="crousalNextBack">  </div>
+            <div id="nextPage"  class="crousalNextBack">  </div>
+        </div>
+	</div>
+    <!-- pagination div end-->         
+  </body>
+</html>
